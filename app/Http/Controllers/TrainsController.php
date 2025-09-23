@@ -16,6 +16,9 @@ class TrainsController extends Controller
         // - Solo quelli che partono da oggi in avanti
         $trains = Train::where("departure_time", ">=", date("Y-m-d H:i:s"))->get();
 
+        // todo: Filtro per nome agenzia (ricerca parziale)
+        // $trains = Train::where("agency", "LIKE", "%a%"))->get();
+
         return view('home', compact('trains'));
     }
 }
