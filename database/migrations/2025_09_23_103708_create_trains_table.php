@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('agency', 100);
             $table->string('departure_station', 100);
             $table->string('arrival_station', 100);
-            $table->dateTime('departure_time');
-            $table->dateTime('arrival_time');
+            $table->timestamp('departure_time')->useCurrent();
+            $table->timestamp('arrival_time')->useCurrent();
             $table->string('train_code', 20)->unique();
             $table->tinyInteger('carriages')->unsigned();
             $table->boolean('in_time')->default(true);
