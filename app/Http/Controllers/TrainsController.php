@@ -10,7 +10,11 @@ class TrainsController extends Controller
 {
     public function index() {
 
-        $trains = Train::all();
+        // -  Tutti i treni indiscriminatamente
+        // $trains = Train::all();
+
+        // - Solo quelli che partono da oggi in avanti
+        $trains = Train::where("departure_time", ">=", date("Y-m-d H:i:s"))->get();
 
         return view('home', compact('trains'));
     }
