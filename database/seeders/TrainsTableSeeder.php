@@ -106,7 +106,7 @@ class TrainsTableSeeder extends Seeder
             $newTrain->train_code = strtoupper($faker->bothify('??####'));
             $newTrain->carriages = $faker->numberBetween(3, 15);
             $newTrain->in_time = $faker->boolean(80); // 80% di probabilità di essere in orario
-            $newTrain->deleted = false;
+            $newTrain->deleted = $faker->boolean(5); // 5% di probabilità di essere cancellato
 
             $newTrain->save();
         }
