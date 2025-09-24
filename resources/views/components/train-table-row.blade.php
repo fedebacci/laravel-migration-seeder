@@ -1,3 +1,18 @@
+
+{{-- <p>
+    {{ $trainObj }}
+</p> --}}
+
+{{-- <p>
+    {{ $agency }}
+</p> --}}
+
+
+
+
+
+
+
 @if ($deleted == "1")
     <tr class="table-danger">
 @else
@@ -28,6 +43,6 @@
             {{ $in_time }}
         </td>
         <td scope="row">
-            {{ $deleted ? 'Cancellato' : 'Non cancellato' }}
+            {{ $deleted == "1" ? 'Cancellato' : 'Non cancellato' }}
         </td>
     </tr>

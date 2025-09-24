@@ -74,6 +74,54 @@
                                         {{ $train->deleted }}
                                     </x-slot>
                                 </x-train-table-row>
+
+                                {{-- <x-train-table-row
+                                    :train_code="$train->train_code"
+                                    :agency="$train->agency"
+                                    :departure_station="$train->departure_station"
+                                    :arrival_station="$train->arrival_station"
+                                    :departure_time="$train->departure_time"
+                                    :arrival_time="$train->arrival_time"
+                                    :carriages="$train->carriages"
+                                    :in_time="$train->in_time"
+                                    :deleted="$train->deleted"
+                                /> --}}
+
+                                {{-- <x-train-table-row :train="$train">
+                                    <x-slot name="trainObj">
+                                        {{ $train }}
+                                    </x-slot>
+                                    <x-slot name="train_code">
+                                        {{ $train->train_code }}
+                                    </x-slot>
+                                    <x-slot name="agency">
+                                        {{ $train->agency }}
+                                    </x-slot>
+                                    <x-slot name="departure_station">
+                                        {{ $train->departure_station }}
+                                    </x-slot>
+                                    <x-slot name="arrival_station">
+                                        {{ $train->arrival_station }}
+                                    </x-slot>
+                                    <x-slot name="departure_time">
+                                        {{ $train->departure_time }}
+                                    </x-slot>
+                                    <x-slot name="arrival_time">
+                                        {{ $train->arrival_time }}
+                                    </x-slot>
+                                    <x-slot name="carriages">
+                                        {{ $train->carriages }}
+                                    </x-slot>
+                                    <x-slot name="in_time">
+                                        {{ $train->in_time }}
+                                    </x-slot>
+                                    <x-slot name="deleted">
+                                        {{ $train->deleted }}
+                                    </x-slot>
+                                </x-train-table-row> --}}
+
+
+                                {{-- <x-train-table-row :train="$train" /> --}}
                             @endforeach
                         </tbody>
                     </table>
