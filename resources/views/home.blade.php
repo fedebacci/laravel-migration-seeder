@@ -44,10 +44,7 @@
                             </tr>
                         </thead>
                         <tbody>
-
                             @foreach ($trains as $train)
-
-
                                 <x-train-table-row>
                                     <x-slot name="train_code">
                                         {{ $train->train_code }}
@@ -77,10 +74,7 @@
                                         {{ $train->deleted }}
                                     </x-slot>
                                 </x-train-table-row>
-
-                                
                             @endforeach
-
                         </tbody>
                     </table>
 
@@ -242,39 +236,6 @@
                         <tbody>
 
                             @foreach ($trainsLocalDepartures as $train)
-                                {{-- @if ($train->deleted == 1)
-                                    <tr class="table-danger">
-                                @else
-                                    <tr>
-                                @endif                                
-                                        <td scope="row">
-                                            {{ $train->train_code }}
-                                        </td>
-                                        <td>
-                                            {{ $train->agency }}
-                                        </td>
-                                        <td>
-                                            {{ $train->departure_station }}
-                                        </td>
-                                        <td>
-                                            {{ $train->arrival_station }}
-                                        </td>
-                                        <td>
-                                            {{ $train->departure_time }}
-                                        </td>
-                                        <td>
-                                            {{ $train->arrival_time }}
-                                        </td>
-                                        <td>
-                                            {{ $train->carriages }}
-                                        </td>
-                                        <td>
-                                            {{ $train->in_time ? 'In orario' : 'In ritardo' }}
-                                        </td>
-                                        <td>
-                                            {{ $train->deleted ? 'Cancellato' : 'Non cancellato' }}
-                                        </td>
-                                    </tr> --}}
                                 <x-train-table-row>
                                     <x-slot name="train_code">
                                         {{ $train->train_code }}
